@@ -1,0 +1,247 @@
+ @font-face {
+    font-family: 'Avenir';
+    src: url('../fonts/AvenirNextCyr-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  }
+
+.streams {
+    z-index: 0;
+    overflow: hidden;
+}
+
+.streams-left-shape {
+    top: -50px;
+}
+
+.streams-right-shape {
+    bottom: 195px;
+}
+
+.stream-video-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stream-games {
+    /* width: 15%; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-right: 20px;
+    filter: blur(12px);
+}
+
+.stream-game {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.stream-game h4 {
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #b75cbe;
+    font-family: 'Avenir';
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+
+.stream-wrapper {
+    /* width: 55%; */
+}
+
+.stream-chat-wrapper {
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* padding: 15px; */
+    background-color: #27272f;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #98a1ad;
+}
+
+.chat-heading div span {
+    font-family: 'Tahoma', 'Helvetica', 'Arial';
+}
+
+.chat-body {
+    padding: 0 15px;
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 2px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+
+.comments {
+    filter: blur(12px);
+    margin-bottom: 0;
+    padding-left: 0;
+    max-height: 610px;
+    /* overflow: scroll; */
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+.comment {
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.comment img {
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.chat-ending {
+    margin-bottom: 15px;
+}
+
+.comment-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-text h5 {
+    font-family: 'Tahoma', 'Helvetica', 'Arial';
+    font-size: 15px;
+    color: white;
+}
+
+.comment-text p {
+    font-family: 'Tahoma', 'Helvetica', 'Arial';
+    font-size: 14px;
+    color: #a0a4b7;
+}
+
+.chat-ending .nav-input-container {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 15px;
+    align-items: center;
+}
+
+.chat-ending input.form-control {
+    border-radius: 19.5px;
+    background-color: #212128;
+    color: #747483;
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    position: relative;
+}
+
+.chat-input-box {
+    position: relative;
+}
+
+.chat-input-box a {
+position: absolute;
+top:7px
+}
+
+.chat-smile {
+right: 27px;
+}
+
+.chat-attach {
+right: 0px;
+}
+
+.chat-input-box a:hover img {
+    filter: brightness(0) invert();
+}
+
+.chat-ending input.form-control:focus {
+    background-color: #212128;
+    color: white;
+    box-shadow: none !important;
+}
+
+
+
+.chat-ending input.form-control:focus::placeholder {
+    color: transparent;
+}
+
+
+.chat-heading-left span {
+    color: white;
+}
+
+.chat-heading-right {
+    display: flex;
+    align-items: center;
+}
+
+.chat-heading-right span {
+    color: white;
+}
+
+.chat-heading-right i {
+    margin-left: 10px;
+    color: #98a1ad;
+    opacity: .8;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.games {
+    min-height: 1px;
+}
+
+.games-image {
+    bottom: 20px;
+}
+
+.games-image img {
+    max-width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+    .stream-games {
+        display: none;
+    }
+
+    .video-wrap,.art-video-player,.art-video-player video {
+        min-height: 190px;
+    }
+
+    .stream-chat-wrapper {
+        width: 100%;
+    }
+}
